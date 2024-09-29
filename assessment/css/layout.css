@@ -1,39 +1,54 @@
-/* Practice Website Layouts */
-
-.page-container {
-    width: 80%;
-    margin: 2% auto;
-}
-
+/* Layout CSS */
 header {
-    width: 100%;
-    background-color: var(--secondary);
-    padding: 1%;
-}
-
-header h1 {
-    margin-top: 0;
-    margin-bottom: 0;
+    background-color: #00796b;
     color: white;
+    padding: 1rem;
 }
 
-
-
-.image-container {
-    position: relative; /* 确保图片相对于容器定位 */
-    height: 100vh; /* 设置容器高度 */
+nav ul {
+    display: flex;
+    justify-content: space-around;
 }
 
-.move-image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 300px; /* 你可以根据需要调整图片大小 */
-    height: auto;
+nav ul li {
+    margin-right: 1rem;
 }
 
-@media (max-width: 768px) {
-    .move-image {
-        width: 150px; /* 在小屏幕上调整图片大小 */
-    }
+/* Styling for the main hero section */
+.intro {
+    padding: 2rem 4rem;
+    background-color: white;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+    padding-top: 4rem;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #333;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Layout for the hero section */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    gap: 2rem;
+}
+
+.hero-image img {
+    width: 600px;
+    border-radius: 15px;
 }

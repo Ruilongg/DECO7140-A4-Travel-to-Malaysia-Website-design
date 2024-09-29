@@ -1,16 +1,9 @@
-
-
-.btn-action {
-    padding: 10px 20px;
-    background-color: var(--action);
-    border: name;
-    border-radius: 50px;
+/* Components CSS */
+button {
+    background-color: #00796b;
     color: white;
-    font-size: 16px;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-action:hover {
-    background-color: var(--primary);
 }

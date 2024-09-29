@@ -1,20 +1,6 @@
-// Imports
+import { showPageLoadMessage } from './page_load_message.js';
 
+console.log('Index page loaded');
 
-// Variables & Constants
-
-
-// Event Listeners
-
-
-
-// Startup code
-
-
-// Functions - specific behaviours
-
-
-
-//Functions - general
-
-
+// Call the function from page_load_message.js to display a message
+showPageLoadMessage();
