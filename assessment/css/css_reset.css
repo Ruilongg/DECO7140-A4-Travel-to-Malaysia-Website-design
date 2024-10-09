@@ -1,47 +1,58 @@
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-
+/* Select all common HTML elements and remove default margin, padding, border.
+   Reset font size and inherit font styles. Set baseline vertical alignment. */
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+       margin: 0;           /* Remove default margin for all elements */
+       padding: 0;          /* Remove default padding for all elements */
+       border: 0;           /* Remove default border for all elements */
+       font-size: 100%;     /* Reset font size to browser default */
+       font: inherit;       /* Inherit font styles from parent element */
+       vertical-align: baseline; /* Set vertical alignment to baseline */
+   }
+   
+   /* Set new HTML5 elements to display as block elements 
+      so they behave consistently across browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+       display: block; /* Make these HTML5 elements block-level elements */
+   }
+   
+   /* Set default line height for the body */
+   body {
+       line-height: 1; /* Set line height to 1 to ensure consistent spacing across browsers */
+   }
+   
+   /* Remove default list styles (bullets or numbers) from ordered and unordered lists */
+   ol, ul {
+       list-style: none; /* Remove default list item markers */
+   }
+   
+   /* Remove default quotes for blockquote and q elements */
+   blockquote, q {
+       quotes: none; /* Disable default quotation marks for blockquote and q */
+   }
+   
+   /* Ensure blockquote and q elements do not generate quotation marks via pseudo-elements */
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+       content: ''; /* Clear content for pseudo-elements */
+       content: none; /* Completely remove any quotation mark content */
+   }
+   
+   /* Set table styling to collapse borders and remove spacing between table cells */
+   table {
+       border-collapse: collapse; /* Collapse borders so they overlap */
+       border-spacing: 0; /* Remove default space between table cells */
+   }
+   

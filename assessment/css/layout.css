@@ -1,3 +1,4 @@
+/* Layout CSS */
 header {
     background-color: #00796b;
     color: white;
@@ -9,7 +10,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0.2rem;
 }
 
 .logo {
@@ -18,34 +19,104 @@ nav {
 }
 
 .logo img {
-    width: 40px; 
+    width: 40px; /* Adjust the width of the logo */
     height: auto;
-    margin-right: 10px; 
+    margin-right: 10px; /* Space between the logo and the text */
 }
 
 .logo span {
     font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
-    color: white;
+    color: black;
 }
 
-/* Center the navigation links */
+
+nav{
+    display: flex;
+    flex: 1;
+    font-size: 2vh;
+}
+
+
+/* space-evenly the navigation links */
 nav ul {
     display: flex;
-    justify-content: center; 
+    justify-content: space-evenly; 
     list-style: none;
-    flex-grow: 1; 
+    flex-grow: 1; /* Allow the ul to grow to take available space */
 }
+
+nav li a{
+    padding-bottom: 0.8vh;
+}
+
+nav li a:hover{
+    color: #FFA000;
+    cursor: pointer;
+}
+
+
+.nav-active a{
+    border-bottom: 2px solid #FFA000;
+    color: #FFA000;
+}
+
+
 
 nav ul li {
     margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1rem;
 }
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding-right: 5%;
+    padding-left: 7%;
+    background-color: white;
+}
+
+
+.footer-bottom{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom img{
+    width: 5vh;
+    height: 5vh;
+    float: left;
+}
+
+.footer-bottom span{
+    margin-left: 1vh;
+    font-size: 2vh;
+}
+
+.social-media{
+    display: flex;
+    gap: 1.8vh;
+    margin-bottom: 1.2vh;
+}
+
+.social-media img{
+    width: 5vh;
+    height: 5vh;
+}
+
+
+
 
 /* Hero Section */
 main {
@@ -75,7 +146,7 @@ main {
 }
 
 .intro p {
-    font-family: 'Merriweather', serif; 
+    font-family: 'Merriweather', serif; /* Apply Merriweather font */
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 2rem;
@@ -83,13 +154,86 @@ main {
 }
 
 /* Hero image aligned to the right */
-.hero-image {
+.index-background {
     flex: 1;
     text-align: right;
 }
 
-.hero-image img {
-    max-width: 60%; 
+.index-background img {
+    max-width: 60%; /* Make the image responsive */
     height: auto;
-    border-radius: 15px;
+    border-radius: 15px; /* Optional: rounded corners */
 }
+
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices (600px and below) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro {
+        padding: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 80%; /* Larger image for mobile */
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+
+/* Tablets (600px to 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro {
+        padding: 1.5rem;
+    }
+
+    .hero-image img {
+        max-width: 70%; /* Slightly larger image for tablets */
+        margin-top: 1rem;
+    }
+}
+
+/* Larger tablets and small desktops (768px to 1024px) */
+@media (max-width: 1024px) {
+    .intro h1 {
+        font-size: 2.5rem; /* Slightly smaller font for tablets */
+    }
+
+    .hero-image img {
+        max-width: 70%;
+    }
+
+    .intro p {
+        font-size: 1.0rem; /* Adjust the paragraph font size for readability */
+    }
+}
+
+
+
