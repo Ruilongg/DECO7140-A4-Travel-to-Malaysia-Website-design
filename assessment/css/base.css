@@ -1,19 +1,18 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     color: #333;
     line-height: 1.6;
 }
 
+
 :root{
     --primary: #00796B;
-    --secondary: #FF7043;
+    --secondary: #FFA000;
     --light: #9ef8ee;
-    --action: #fa7f08;
-    --danger: #B275FA;
+    --action: #FF7043;
+    --background-color: #f4f4f4;
 }
-
-
 
 
 
@@ -63,12 +62,7 @@ h5 {
     font-weight: 600;
     margin-top: 1%;
     margin-bottom: 1%;
-    color: var(--danger);
 }
-
-
-
-
 
 
 

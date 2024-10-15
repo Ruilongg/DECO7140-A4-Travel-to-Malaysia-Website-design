@@ -6,3 +6,54 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+.social-media{
+    display: flex;
+    gap: 1.8vh;
+    margin-bottom: 1.2vh;
+}
+
+.social-media img{
+    width: 5vh;
+    height: 5vh;
+}
+
+
+
+#gridcontainer {
+    display: grid; /* turn this element into a grid container*/
+
+    /* define the grid structure, and content of cells*/
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "foot foot foot";
+
+    grid-template-columns: 1fr 1fr 1fr; /* set the column widths*/
+    grid-template-rows: auto auto 1fr auto; /* set the row heights*/
+}
+
+
+header{
+    grid-area: header; /* attach this element to the grid area named header*/
+}
+
+#flexnavbar{
+    grid-area: nav; /* attach this element to the grid area named nav*/
+}
+
+main{
+    grid-area: main; /* attach this element to the grid area named main*/
+}
+
+footer{
+    grid-area: foot; /* attach thie element to the grid area named foot*/
+}
+
+
+
+
+
+
