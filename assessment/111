@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia</title>
+    <link rel="stylesheet" href="css/css_reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Explore Malaysia</div>
+        <nav class="nav">
+            <a href="#">Destinations</a>
+            <a href="#">Travel Guides</a>
+            <a href="#">Itinerary Planner</a>
+            <a href="#">Contact Us</a>
+            <a href="#">English</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="content">
+            <p class="tagline">It's time to go✈️</p>
+            <h1>Discover the Wonders of Malaysia - Your Journey Begins Here.</h1>
+            <p class="description">Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
+            
+            <div class="tabs">
+                <button class="active">Stays</button>
+                <button>Activities</button>
+                <button>Culture</button>
+            </div>
+
+            <form class="search-form">
+                <input type="text" placeholder="Location">
+                <input type="date" placeholder="Check in">
+                <input type="date" placeholder="Check out">
+                <select>
+                    <option>Add guests</option>
+                </select>
+                <button class="search-button">Search</button>
+            </form>
+        </div>
+        <div class="image">
+            <img src="/path/to/malaysia-skyline.jpg" alt="Malaysia Skyline">
+        </div>
+    </main>
+</body>
+</html>

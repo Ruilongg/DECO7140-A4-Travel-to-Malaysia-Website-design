@@ -21,6 +21,39 @@ button {
 
 
 
+
+
+/* component.css */
+
+/* ... (其他样式保持不变) ... */
+
+.tagline {
+    color: #000000; /* 将标语颜色改为黑色 */
+    margin-bottom: 1rem;
+}
+
+
+.description {
+    color: #000000; /* 将描述文本颜色改为黑色 */
+    margin-bottom: 2rem;
+}
+
+/* ... (其他样式保持不变) ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #gridcontainer {
     display: grid; /* turn this element into a grid container*/
 
@@ -32,7 +65,7 @@ button {
     "foot foot foot";
 
     grid-template-columns: 1fr 1fr 1fr; /* set the column widths*/
-    grid-template-rows: auto auto 1fr auto; /* set the row heights*/
+    grid-template-rows: auto auto 1fr auto; /* set the row*/
 }
 
 
@@ -53,7 +86,9 @@ footer{
 }
 
 
+/* component.css */
 
+/* ... (previous styles remain) ... */
 
 
 

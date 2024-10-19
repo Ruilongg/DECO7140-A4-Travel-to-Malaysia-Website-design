@@ -2,7 +2,10 @@
 header {
     background-color: #00796b;
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Flexbox layout for navigation */
@@ -13,23 +16,33 @@ nav {
     padding: 0.2rem;
 }
 
-.logo {
+.nav ul {
     display: flex;
-    align-items: center;
+    gap: 30px;
+    list-style-type: none;
 }
 
-.logo img {
-    width: 40px; /* Adjust the width of the logo */
-    height: auto;
-    margin-right: 10px; /* Space between the logo and the text */
+.nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 
-.logo span {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    color: black;
+
+
+
+.main {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
 }
+
+.content {
+    flex: 1;
+}
+
+
 
 
 nav{
@@ -74,16 +87,6 @@ nav ul li a {
     font-size: 1rem;
 }
 
-footer{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 10vh;
-    padding-right: 5%;
-    padding-left: 7%;
-    background-color: var(--background-color);
-}
 
 
 .footer-bottom{
@@ -106,54 +109,331 @@ footer{
 }
 
 
-
-/* Hero Section */
-main {
+/* layout.css */
+.hero-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 将图片和文本内容分开 */
     align-items: center;
-    padding: 2rem 4rem;
 }
 
-.intro {
+.hero-text {
     flex: 1;
-    padding: 2rem 4rem;
-    background-color: white;
-    text-align: left;
-    max-width: 600px;
-    margin: auto;
-    padding-top: 4rem;
+    max-width: 50%;
 }
 
-.intro h1 {
-    font-family: 'Lato', sans-serif;
+.hero-image {
+    flex: 1; /* 确保图片占据页面的右半部分 */
+    display: flex;
+    justify-content: flex-end; /* 使图片内容对齐到右侧 */
+}
+
+.hero-image img {
+    max-width: 100%; /* 确保图片不会超出容器的宽度 */
+    height: auto; /* 保持图片的比例 */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #00897B;
+}
+
+.hero-title {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: bold;
+}
+
+.hero-description {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+
+.search-box {
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00897B;
+    cursor: pointer;
+}
+
+.search-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.search-fields input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.search-btn {
+    background-color: #00897B;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.breadcrumb {
     margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+.destination-header h1 {
+    font-size: 2.5rem;
     color: #333;
 }
 
-.intro p {
-    font-family: 'Merriweather', serif; /* Apply Merriweather font */
+.destination-header p {
+    margin-top: 10px;
     font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 2rem;
-    line-height: 1.5;
+    color: #00897B;
 }
 
-/* Hero image aligned to the right */
-.index-background {
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.filter-categories {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-categories button {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-categories button.active {
+    background-color: black;
+    color: white;
+}
+
+.filter-button {
+    padding: 0.8rem 1.2rem;
+    background-color: #00897B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* layout.css */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.destination-item {
+    text-align: center;
+    overflow: hidden; /* 确保图片不会超出容器 */
+}
+
+.destination-item img {
+    width: 100%; /* 确保图片占据整个容器的宽度 */
+    height: 200px; /* 设置固定的高度 */
+    object-fit: cover; /* 保持图片比例，同时裁剪不合适的部分 */
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+
+.destination-item img:hover {
+    transform: scale(1.05);
+}
+
+.destination-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+.main-content {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.contact-info {
     flex: 1;
-    text-align: right;
+    margin-right: 50px;
 }
 
-.index-background img {
-    max-width: 60%; /* Make the image responsive */
-    height: auto;
-    border-radius: 15px; /* Optional: rounded corners */
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
+.contact-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px;
+}
+
+.send-btn {
+    background-color: #00897B;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.send-btn:hover {
+    background-color: #00695C;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f1f1f1;
+    margin-top: 3rem;
+    width: 100%; /* 确保 footer 占满页面宽度 */
+    max-width: 1200px; /* 可选：限制最大宽度以保持内容居中 */
+    margin: 3rem auto; /* 自动居中并避免水平滚动 */
+    overflow-x: hidden; /* 防止因内容过多导致的水平滚动 */
+    box-sizing: border-box; /* 确保 padding 不会影响宽度 */
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 50px;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    background-color: #00897B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 
 
@@ -177,18 +457,6 @@ main {
         flex: none; /* elements will not shrink or grow*/
         padding: 3px 10px 3px 10ox; /* add some padding to space things out */
     }
-}
-
-
-#gridcontainer {
-    display: grid; /* turn this element into a grid container*/
-
-    /* define the grid structure, and content of cells*/
-    grid-template-areas: 
-    "head head"
-    "nav nav nav"
-    "main main main"
-    "foot foot foot";
 }
 
 

@@ -12,13 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="gridcontainer">
         <header>
+
             <nav id = "flexnavbar" >
-                <div class="logo">
-                    <img src="Images/Explore_Malaysia.png" alt="Explore Malaysia">
-                    <span>Explore Malaysia</span>
-                </div>
                 <ul>
                     <li class="nav-active"><a href="index.html">Home</a></li>
                     <li><a href="Destinations.html">Destinations</a></li>
@@ -27,42 +23,59 @@
                     <li><a href="Contact Us.html">Contact Us</a></li>
                 </ul>
             </nav>
-
+            <div class="header-right">
+                <a href="#" class="language">English</a>
+                <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
+            </div>
         </header>
 
-        <main>
-            <section class="intro">
-                <h1>Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
-                <p>Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
-            </section>
-        </main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">It's time to go ✈️</p>
+                    <h1 class="hero-title">Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
+                    <p class="hero-description">Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="Images/Kuala _Lumpur.png" alt="Malaysia Skyline">
+                </div>
+            </div>
+            <div class="search-box">
+                <div class="search-options">
+                    <div class="option">Stays</div>
+                    <div class="option">Activities</div>
+                    <div class="option">Culture</div>
+                </div>
+                <div class="search-fields">
+                    <input type="text" placeholder="Location">
+                    <input type="date" placeholder="Check in">
+                    <input type="date" placeholder="Check out">
+                    <input type="number" placeholder="Who">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
         
-        <main>
-            <section class="index-background">
-                <img src="Images/Kuala _Lumpur.png" alt="Malaysia Skyline">
-            </section>
-        </main>
         <footer>
             <div class="footer-bottom">
                 <span> Looking to travel to Malaysia? Here are some <br>
                     helpful tips to get you started on your trip.
                 </span>
                 <div class="social-media">
-                    <a href="https://www.facebook.com/">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                         <img src="Images/facebook-icon.png" alt="facebook">
                     </a>
-                    <a href="https://www.instagram.com/"></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <img src="Images/instagram-icon.jpg" alt="instagram">
                     </a>
-                    <a href="https://x.com/"></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
                         <img src="Images/x-icon.png" alt="twitter">
                     </a>
-                </div>
+                </div>                
             </div>
             <p>&copy; 2024 Ruilong Huang. All rights reserved</p>
         </footer>
         <script type="module" src="js/index.js"></script>
-        </div>
     </body>
 </html>
 

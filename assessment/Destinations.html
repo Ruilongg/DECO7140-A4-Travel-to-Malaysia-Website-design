@@ -14,10 +14,6 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="Images/Explore_Malaysia.png" alt="Explore Malaysia">
-                <span>Explore Malaysia</span>
-            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Destinations.html">Destinations</a></li>
@@ -26,14 +22,68 @@
                 <li><a href="Contact Us.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div class="header-right">
+            <a href="#" class="language">English</a>
+            <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
+        </div>
     </header>
 
-    <main>
-        <section class="intro">
+    <main class="main-content">
+        <section class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="Destinations.html">Destinations</a>
+        </section>
+
+        <section class="destination-header">
             <h1>Explore Destinations!</h1>
-            <p>Find your perfect destination in Malaysia.</p>
+            <p>50+ Destinations in Malaysia</p>
+        </section>
+
+        <div class="filter-section">
+            <div class="filter-categories">
+                <button class="active">Popular</button>
+                <button>Nature Parks</button>
+                <button>Cultural Sites</button>
+                <button>Adventure Spots</button>
+            </div>
+            <button class="filter-button">Filters</button>
+        </div>
+
+        <section class="destination-grid">
+            <div class="destination-item">
+                <img src="Images/langkawi.png" alt="Langkawi">
+                <p>Langkawi</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/sabah.png" alt="Sabah">
+                <p>Sabah</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/penang.jpg" alt="Penang">
+                <p>Penang</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/kuala-lumpur.png" alt="Kuala Lumpur">
+                <p>Kuala Lumpur</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/malacca.png" alt="Malacca">
+                <p>Malacca</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/ipoh.png" alt="Ipoh">
+                <p>Ipoh</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/kuching.png" alt="Kuching">
+                <p>Kuching</p>
+            </div>
+            <div class="destination-item">
+                <img src="Images/sandakan.png" alt="Sandakan">
+                <p>Sandakan</p>
+            </div>
         </section>
     </main>
+
     <script type="module" src="js/index.js"></script>
 </body>
 </html>
