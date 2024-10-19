@@ -44,11 +44,45 @@ button {
 
 
 
+.contact-container {
+    display: flex;
+    gap: 40px; /* 确保 Contact Information 和表单之间有合适的间距 */
+    align-items: flex-start; /* 顶部对齐 */
+    justify-content: center; /* 水平居中 */
+    max-width: 1200px; /* 限制整体的最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+    padding: 20px; /* 添加一些内边距，防止内容贴边 */
+}
 
+.contact-info {
+    flex: 1; /* 让 Contact Information 占用一定空间 */
+    max-width: 300px; /* 限制最大宽度 */
+}
 
+.form-container {
+    flex: 2; /* 表单容器部分占用更多空间 */
+    display: flex;
+    flex-direction: column; /* 垂直排列两个表单 */
+    gap: 20px; /* 两个表单之间的间距 */
+    width: 100%; /* 确保容器占据可用宽度 */
+    max-width: 600px; /* 限制最大宽度，防止表单太宽 */
+}
 
+.contact-form, #create-event-form {
+    width: 100%; /* 让表单占满父容器的宽度 */
+}
 
+.contact-form .form-group, 
+#create-event-form .form-group {
+    width: 100%;
+    margin-bottom: 15px; /* 每个表单元素之间的间距 */
+}
 
+#create-event-form input, 
+#create-event-form textarea, 
+#create-event-form button {
+    width: 100%; /* 让表单元素占满可用宽度 */
+}
 
 
 

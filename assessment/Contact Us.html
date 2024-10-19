@@ -46,30 +46,68 @@
                 <p><strong>Email:</strong> support@exploremalaysia.com</p>
                 <p><strong>Location:</strong> Kuala Lumpur, Malaysia</p>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first_name" maxlength="100" required>
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last_name" maxlength="100" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="Email" placeholder="something@gmail.com" maxlength="100" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="Phone" maxlength="50" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message (Optional)</label>
-                    <textarea id="message" name="Message" placeholder="Type here..."></textarea>
-                </div>
-                <button type="submit" class="send-btn">Send Message</button>
-            </form>                       
+        
+            <div class="form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="something@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" placeholder="Type here..."></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+        
+                <!-- Event Form -->
+                <form id="create-event-form">
+                    <div class="form-group">
+                        <label for="event-name">Event Name:</label>
+                        <input type="text" id="event-name" name="event_name" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="organiser">Organiser:</label>
+                        <input type="text" id="organiser" name="organiser" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type">Event Type:</label>
+                        <input type="text" id="event-type" name="event_type" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-time">Date & Time:</label>
+                        <input type="datetime-local" id="date-time" name="date_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-photo">Event Photo (Optional):</label>
+                        <input type="file" id="event-photo" name="genericevent_photo" accept="image/*">
+                    </div>
+                    <button type="submit">Submit Event</button>
+                    <div id="submitResponse" aria-live="assertive"></div>
+                </form>
+            </div>
         </div>
+           
     </main>
 
     <footer class="footer">
@@ -90,6 +128,6 @@
             </form>
         </div>
     </footer>
-    <script type="module" src="js/contact.js"></script>
+    <script type="module" src="js/contact.js" defer></script>
 </body>
 </html>
