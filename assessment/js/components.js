@@ -1,12 +1,11 @@
 //Constants
 const studentNumber = "s4600312"
-const uqcloudZoneId = "4998645e"
+const uqcloudZoneId = "724d9014"
 
-// Create headers once as a constant
-const headers = new Headers();
-headers.append("Content-Type", "application/json");
-headers.append("s4600312", studentNumber);
-headers.append("4998645e", uqcloudZoneId);
+// 正确导出 headers
+export const headers = new Headers();
+headers.append("student_number", "s1234567");
+headers.append("uqcloud_zone_id", "e11123c8");
 
 // Function to submit form data
 function submitContactForm(formData, headers, handleSuccess, handleError) {
