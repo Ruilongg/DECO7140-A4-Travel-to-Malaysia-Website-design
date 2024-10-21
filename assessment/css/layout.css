@@ -1,6 +1,6 @@
 /* Layout CSS */
 header {
-    background-color: #00796b;
+    background-color: var(--primary-green);
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -65,7 +65,7 @@ nav li a{
 }
 
 nav li a:hover{
-    color: var(--secondary);
+    color: var(--secondary-yellow);
     cursor: pointer;
 }
 
@@ -107,6 +107,43 @@ nav ul li a {
     margin-left: 1vh;
     font-size: 2vh;
 }
+
+
+
+.hero-banner {
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    max-height: 400px; /* 调整这个值以适应您的图片和设计需求 */
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center; /* 调整这个值来控制图片的焦点 */
+}
+
+.hero-banner h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--accent-white);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明背景以提高文字可读性 */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 1.8rem;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
 
 
 /* layout.css */
@@ -375,10 +412,12 @@ textarea {
 
 .footer {
     display: flex;
+    text-align: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f1f1f1;
+    background-color: var(--accent-soft-gray);
     margin-top: 3rem;
+    color: var(--text-color);
     width: 100%; /* 确保 footer 占满页面宽度 */
     max-width: 1200px; /* 可选：限制最大宽度以保持内容居中 */
     margin: 3rem auto; /* 自动居中并避免水平滚动 */
@@ -434,6 +473,34 @@ textarea {
     cursor: pointer;
     border-radius: 5px;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+    background-color: var(--accent-white);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid var(--accent-soft-gray);
+}
+
+.grid-item h2 {
+    color: var(--primary-green);
+}
+
+.grid-item img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+
+
 
 
 

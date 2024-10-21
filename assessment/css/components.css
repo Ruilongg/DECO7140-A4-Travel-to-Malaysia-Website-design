@@ -122,7 +122,136 @@ footer{
 
 /* component.css */
 
-/* ... (previous styles remain) ... */
+.event-list-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+#event-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#event-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#event-list li img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
 
 
+/* Search Bar */
+#search form {
+    display: flex;
+    margin-bottom: 2rem;
+}
 
+#search input[type="text"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--accent-soft-gray);
+    border-radius: 5px 0 0 5px;
+}
+
+#search button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-green);
+    color: var(--accent-white);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search button:hover {
+    background-color: var(--primary-blue);
+}
+
+
+/* Guide Content */
+.guide-content {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: var(--accent-white);
+}
+
+table, th, td {
+    border: 1px solid var(--accent-soft-gray);
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-green);
+    color: var(--accent-white);
+}
+
+/* FAQ Section */
+.faq-content details {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: var(--accent-white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq-content summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary-green);
+}
+
+.faq-content summary:hover {
+    background-color: var(--accent-soft-gray);
+}
+
+/* Buttons */
+.cta-button {
+    background-color: var(--secondary-yellow);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-coral);
+    color: var(--accent-white);
+}
+
+/* Links */
+.content-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.content-link:hover {
+    text-decoration: underline;
+    color: var(--primary-green);
+}
