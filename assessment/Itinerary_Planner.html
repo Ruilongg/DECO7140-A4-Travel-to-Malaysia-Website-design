@@ -25,138 +25,214 @@
             </ul>
         </nav>
         <div class="header-right">
-            <a href="#" class="language">English</a>
+            <div class="language-dropdown">
+              <button class="language-btn">English</button>
+              <div class="language-options">
+                <a href="#" class="language" data-lang="zh">中文</a>
+                <a href="#" class="language" data-lang="es">Español</a>
+              </div>
+            </div>
             <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
-        </div>
+          </div>
     </header>
-
-    <div class="hero-image">
-        <img src="images/malaysia-panorama.jpg" alt="Beautiful panorama of Malaysia">
-        <div class="hero-text">
-            <h1>Plan Your Malaysian Adventure</h1>
+    <section class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="Itinerary_Planner.html">Itinerary Planner</a>
+    </section>
+    <section class="image-grid-section">
+        <div class="image-grid">
+          <div class="image-item">
+            <img src="Images/Malaysian Tea Plantation.jpg" alt="Malaysian Tea Plantation">
+            <div class="image-overlay">
+              <h3>Malaysian Tea Plantation</h3>
+              <p>Explore the lush tea fields</p>
+            </div>
+          </div>
+          <div class="image-item">
+            <img src="Images/malaysia-flag.jpg" alt="Malaysian Flag">
+            <div class="image-overlay">
+              <h3>Malaysian Flag</h3>
+              <p>Symbol of national pride</p>
+            </div>
+          </div>
+          <div class="image-item">
+            <img src="Images/Traditional Malaysian Village.jpg" alt="Traditional Malaysian Village">
+            <div class="image-overlay">
+              <h3>Traditional Malaysian Village</h3>
+              <p>Immerse in the local culture</p>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
     <main class="container">
-        <section class="itinerary-builder">
-            <h2>Build Your Itinerary</h2>
-            
-            <div class="date-picker">
-                <i class="fas fa-calendar-alt"></i>
-                <input type="date" id="start-date" placeholder="Start Date">
-                <input type="date" id="end-date" placeholder="End Date">
+        <section class="features-section">
+            <div class="feature-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Custom Itinerary Builder</h3>
+                <p>Design your personalized journey by adding destinations, activities, and accommodations.</p>
             </div>
-            
-            <div class="destination-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search destinations in Malaysia">
+            <div class="feature-card">
+                <i class="fas fa-route"></i>
+                <h3>Suggested Itineraries</h3>
+                <p>Explore curated travel plans based on themes like culture, adventure, or relaxation.</p>
             </div>
-            
-            <div class="activity-list">
-                <span class="activity-item"><i class="fas fa-umbrella-beach"></i> Beaches</span>
-                <span class="activity-item"><i class="fas fa-landmark"></i> Cultural Sites</span>
-                <span class="activity-item"><i class="fas fa-tree"></i> Nature</span>
-                <span class="activity-item"><i class="fas fa-utensils"></i> Food Tours</span>
-                <span class="activity-item"><i class="fas fa-hiking"></i> Adventure</span>
+            <div class="feature-card">
+                <i class="fas fa-map"></i>
+                <h3>Interactive Map</h3>
+                <p>Visualize and optimize your travel routes with our integrated mapping system.</p>
             </div>
-            
-            <h3>Your Itinerary</h3>
-            <ul class="destination-list">
-                <li class="destination-item">
-                    <img src="images/kuala-lumpur-thumb.jpg" alt="Kuala Lumpur">
-                    <span>Kuala Lumpur - 2 days</span>
-                </li>
-                <li class="destination-item">
-                    <img src="images/penang-thumb.jpg" alt="Penang">
-                    <span>Penang - 3 days</span>
-                </li>
-                <li class="destination-item">
-                    <img src="images/langkawi-thumb.jpg" alt="Langkawi">
-                    <span>Langkawi - 2 days</span>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="map-container">
-            <div id="map" style="height: 400px; background-color: #e0e0e0;">
-                Map Placeholder
-            </div>
-        </section>
-        
-        <section class="timeline">
-            <h3>Your Journey</h3>
-            <div class="timeline-container">
-                <!-- Timeline items will be dynamically generated here -->
+            <div class="feature-card">
+                <i class="fas fa-tools"></i>
+                <h3>Smart Planning Tools</h3>
+                <p>Access powerful tools for organizing and personalizing your travel experience.</p>
             </div>
         </section>
 
-        <section class="accommodation-options">
-            <h2>Accommodation Options</h2>
-            <div class="grid">
-                <div class="accommodation-card">
-                    <img src="images/luxury-hotel.jpg" alt="Luxury Hotel">
-                    <h3>Luxury Hotel</h3>
-                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                    <p>From $100/night</p>
-                </div>
-                <div class="accommodation-card">
-                    <img src="images/budget-hotel.jpg" alt="Budget Hotel">
-                    <h3>Budget Hotel</h3>
-                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                    <p>From $30/night</p>
-                </div>
-                <div class="accommodation-card">
-                    <img src="images/hostel.jpg" alt="Hostel">
-                    <h3>Hostel</h3>
-                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                    <p>From $10/night</p>
-                </div>
+        <section class="planner-section">
+            <div class="section-header">
+                <h2>Start Planning Your Trip</h2>
+                <p>Create your customized itinerary in just a few steps</p>
             </div>
-        </section>
+            
+            <div class="planner-container">
+                <!-- 左侧规划面板 -->
+                <div class="planner-sidebar">
+                    <div class="planning-card">
+                        <h3>Travel Dates</h3>
+                        <div class="date-picker-group">
+                            <div class="date-field">
+                                <label>Start Date</label>
+                                <div class="input-with-icon">
+                                    <input type="date" id="start-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                            </div>
+                            <div class="date-field">
+                                <label>End Date</label>
+                                <div class="input-with-icon">
+                                    <input type="date" id="end-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         
-        <div class="itinerary-summary">
-            <h3>Trip Summary</h3>
-            <p><i class="fas fa-clock"></i> Duration: 7 days</p>
-            <p><i class="fas fa-wallet"></i> Estimated Budget: $1000 - $1500</p>
-            <p><i class="fas fa-map-marker-alt"></i> Destinations: Kuala Lumpur, Penang, Langkawi</p>
-        </div>
-
-        <section class="suggested-itineraries">
-            <h2>Suggested Itineraries</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="images/cultural-explorer.jpg" alt="Cultural Explorer">
-                    <h3>Cultural Explorer</h3>
-                    <p>Discover the rich heritage of Malaysia</p>
-                    <a href="#" class="button">View Itinerary</a>
+                    <div class="planning-card">
+                        <h3>Choose Destinations</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search destinations...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <div class="popular-destinations">
+                            <h4>Popular Destinations</h4>
+                            <div class="destination-chips">
+                                <span class="chip">Kuala Lumpur</span>
+                                <span class="chip">Penang</span>
+                                <span class="chip">Langkawi</span>
+                                <span class="chip">Malacca</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="images/beach-paradise.jpg" alt="Beach Paradise">
-                    <h3>Beach Paradise</h3>
-                    <p>Relax on Malaysia's stunning beaches</p>
-                    <a href="#" class="button">View Itinerary</a>
-                </div>
-                <div class="card">
-                    <img src="images/nature-adventure.jpg" alt="Nature Adventure">
-                    <h3>Nature Adventure</h3>
-                    <p>Explore Malaysia's lush rainforests</p>
-                    <a href="#" class="button">View Itinerary</a>
+        
+                <!-- 右侧行程显示区 -->
+                <div class="itinerary-display">
+                    <div class="itinerary-header">
+                        <h3>Your Itinerary</h3>
+                        <button class="btn-outline">Save Draft</button>
+                    </div>
+                    <div class="itinerary-content">
+                        <div class="empty-state">
+                            <img src="Images/map-icon.jpg" alt="Start Planning">
+                            <p>Select destinations to start planning your trip</p>
+                        </div>
+                    </div>
+                    <div class="map-container" id="map">
+                        <!-- Map will be integrated here -->
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="user-photos">
-            <h2>Traveler Photos</h2>
-            <div class="photo-grid">
-                <!-- User-generated photos will be dynamically loaded here -->
+        <section class="suggested-section">
+            <div class="section-header">
+                <h2>Suggested Itineraries</h2>
+                <p>Explore our curated travel experiences</p>
+            </div>
+            
+            <div class="template-grid">
+                <div class="template-card">
+                    <div class="template-image">
+                        <img src="Images/cultural-explorer.jpg" alt="Cultural Experience">
+                        <div class="template-badge">Most Popular</div>
+                    </div>
+                    <div class="template-content">
+                        <h3>Cultural Explorer</h3>
+                        <p class="duration"><i class="fas fa-clock"></i> 7 Days of Heritage and Tradition</p>
+                        <ul class="highlights">
+                            <li>Historical Malacca Tour</li>
+                            <li>Georgetown Heritage Walk</li>
+                            <li>Traditional Craft Workshops</li>
+                        </ul>
+                        <button class="btn-primary">Use Template</button>
+                    </div>
+                </div>
+        
+                <div class="template-card">
+                    <div class="template-image">
+                        <img src="Images/nature-adventure.jpg" alt="Nature Adventure">
+                        <div class="template-badge">Eco-Friendly</div>
+                    </div>
+                    <div class="template-content">
+                        <h3>Nature Adventure</h3>
+                        <p class="duration"><i class="fas fa-clock"></i> 5 Days in Malaysia's Wilderness</p>
+                        <ul class="highlights">
+                            <li>Taman Negara Rainforest Trek</li>
+                            <li>Wildlife Spotting</li>
+                            <li>Canopy Walk Experience</li>
+                        </ul>
+                        <button class="btn-primary">Use Template</button>
+                    </div>
+                </div>
+        
+                <div class="template-card">
+                    <div class="template-image">
+                        <img src="Images/island-paradise.jpg" alt="Beach Holiday">
+                        <div class="template-badge">Relaxation</div>
+                    </div>
+                    <div class="template-content">
+                        <h3>Island Paradise</h3>
+                        <p class="duration"><i class="fas fa-clock"></i> 6 Days of Tropical Bliss</p>
+                        <ul class="highlights">
+                            <li>Langkawi Island Hopping</li>
+                            <li>Sunset Beach Dinners</li>
+                            <li>Snorkeling Adventures</li>
+                        </ul>
+                        <button class="btn-primary">Use Template</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2024 Explore Malaysia. All rights reserved.</p>
+        <div class="footer-bottom">
+            <span> Looking to travel to Malaysia? Here are some <br>
+                helpful tips to get you started on your trip.
+            </span>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/facebook-icon.png" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/instagram-icon.jpg" alt="instagram">
+                </a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/x-icon.png" alt="twitter">
+                </a>
+            </div>                
+        </div>
+        <p>&copy; 2024 Ruilong Huang. All rights reserved</p>
     </footer>
-
-    <script type="module" src="js/itinerary-planner.js"></script>
 </body>
 </html>

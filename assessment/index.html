@@ -14,7 +14,6 @@
     </head>
     <body>
         <header>
-
             <nav id = "flexnavbar" >
                 <ul>
                     <li class="nav-active"><a href="index.html">Home</a></li>
@@ -25,37 +24,67 @@
                 </ul>
             </nav>
             <div class="header-right">
-                <a href="#" class="language">English</a>
+                <div class="language-dropdown">
+                  <button class="language-btn">English</button>
+                  <div class="language-options">
+                    <a href="#" class="language" data-lang="zh">中文</a>
+                    <a href="#" class="language" data-lang="es">Español</a>
+                  </div>
+                </div>
                 <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
-            </div>
+              </div>
         </header>
 
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-subtitle">It's time to go ✈️</p>
-                    <h1 class="hero-title">Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
-                    <p class="hero-description">Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
+        <main class="home-main">
+            <section class="home-hero">
+                <div class="home-content">
+                    <!-- 左侧文本内容 -->
+                    <div class="home-text">
+                        <span class="home-tag">It's time to go ✈️</span>
+                        <h1 class="home-title">Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
+                        <p class="home-description">Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
+                    
+                        <!-- 搜索部分 -->
+                        <div class="home-search">
+                            <nav class="search-tabs">
+                                <button class="search-tab active">Stays</button>
+                                <button class="search-tab">Activities</button>
+                                <button class="search-tab">Culture</button>
+                            </nav>
+                            
+                            <div class="search-container">
+                                <div class="search-field">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" placeholder="Search destinations">
+                                </div>
+                                
+                                <div class="search-field">
+                                    <i class="fas fa-calendar"></i>
+                                    <input type="date" placeholder="Check in">
+                                </div>
+                                
+                                <div class="search-field">
+                                    <i class="fas fa-calendar"></i>
+                                    <input type="date" placeholder="Check out">
+                                </div>
+                                
+                                <div class="search-field">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" placeholder="Add guests">
+                                </div>
+                                
+                                <button class="search-submit">Search</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 右侧图片 -->
+                    <div class="home-image">
+                        <img src="Images/Kuala _Lumpur.png" alt="Malaysia Skyline">
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="Images/Kuala _Lumpur.png" alt="Malaysia Skyline">
-                </div>
-            </div>
-            <div class="search-box">
-                <div class="search-options">
-                    <div class="option">Stays</div>
-                    <div class="option">Activities</div>
-                    <div class="option">Culture</div>
-                </div>
-                <div class="search-fields">
-                    <input type="text" placeholder="Location">
-                    <input type="date" placeholder="Check in">
-                    <input type="date" placeholder="Check out">
-                    <input type="number" placeholder="Who">
-                    <button class="search-btn">Search</button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
         
         <footer>
             <div class="footer-bottom">

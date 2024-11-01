@@ -60,3 +60,73 @@
          margin-top: -1px; /* 覆盖输入框的下边框 */
      }
  }
+
+
+ /* 平板设备 */
+@media (max-width: 1024px) {
+    .planner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+/* 大手机设备 */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* 小手机设备 */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .templates-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .planner-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .features-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 40vh;
+    }
+    
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -23,7 +23,6 @@ input, select, button {
 
 
 
-/* Color Palette */
 :root {
     /* Primary Colors */
     --primary-green: #00796B;
@@ -131,9 +130,21 @@ h5 {
     margin-bottom: 1%;
 }
 
+
 .footer {
-    background-color: var(--footer-background);
-    color: var(--text-color-light);
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-top: 3rem;
+    color: var(--text-color);
+    width: 100%; /* 确保 footer 占满页面宽度 */
+    max-width: 1200px; /* 可选：限制最大宽度以保持内容居中 */
+    margin: 3rem auto; /* 自动居中并避免水平滚动 */
+    overflow-x: hidden; /* 防止因内容过多导致的水平滚动 */
+    box-sizing: border-box; /* 确保 padding 不会影响宽度 */
+    gap: 20px; /* 控制元素之间的间距 */
 }
 
 .button-primary {

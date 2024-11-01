@@ -24,9 +24,15 @@
             </ul>
         </nav>
         <div class="header-right">
-            <a href="#" class="language">English</a>
+            <div class="language-dropdown">
+              <button class="language-btn">English</button>
+              <div class="language-options">
+                <a href="#" class="language" data-lang="zh">中文</a>
+                <a href="#" class="language" data-lang="es">Español</a>
+              </div>
+            </div>
             <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
-        </div>
+          </div>
     </header>
 
     <main class="main-content">
@@ -36,7 +42,10 @@
 
         <section class="destination-header">
             <h1>Explore Destinations!</h1>
-            <p>50+ Destinations in Malaysia</p>
+            <div class="destination-count">
+                <span class="count-badge">50+</span>
+                <span class="count-text">Destinations in Malaysia</span>
+            </div>
         </section>
 
         <div class="filter-section">
@@ -46,7 +55,12 @@
                 <button>Cultural Sites</button>
                 <button>Adventure Spots</button>
             </div>
-            <button class="filter-button">Filters</button>
+            <button class="filter-button">
+                Filters 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 21v-7m0-4V3m8 18v-4m0-7V3m8 18v-11m0-4V3M1 14h6m2-7h6m2 11h6"/>
+                </svg>
+            </button>
         </div>
 
         <section class="destination-grid">
@@ -84,6 +98,25 @@
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer-bottom">
+            <span> Looking to travel to Malaysia? Here are some <br>
+                helpful tips to get you started on your trip.
+            </span>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/facebook-icon.png" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/instagram-icon.jpg" alt="instagram">
+                </a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/x-icon.png" alt="twitter">
+                </a>
+            </div>                
+        </div>
+        <p>&copy; 2024 Ruilong Huang. All rights reserved</p>
+    </footer>
 
     <script type="module" src="js/index.js"></script>
 </body>

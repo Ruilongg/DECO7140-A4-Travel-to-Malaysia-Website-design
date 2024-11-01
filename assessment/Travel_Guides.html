@@ -24,13 +24,22 @@
             </ul>
         </nav>
         <div class="header-right">
-            <a href="#" class="language">English</a>
+            <div class="language-dropdown">
+              <button class="language-btn">English</button>
+              <div class="language-options">
+                <a href="#" class="language" data-lang="zh">中文</a>
+                <a href="#" class="language" data-lang="es">Español</a>
+              </div>
+            </div>
             <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
-        </div>
+          </div>
     </header>
+    <section class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="Travel_Guides.html">Travel Guides</a>
+    </section>
 
     <div class="hero-banner">
-        <img src="Images/kuala-lumpur-feature-image.jpeg" alt="Beautiful Malaysian landscape">
+        <img src="Images/kuala-lumpur-feature-image.jpg" alt="Beautiful Malaysian landscape">
         <h1>Travel Guides to Malaysia</h1>
     </div>
 
@@ -48,7 +57,7 @@
 
         <div class="grid-container">
             <section id="cultural-guides" class="grid-item">
-                <img src="/api/placeholder/64/64" alt="Cultural icon">
+                <img src="Images/Malaysian cultural icon.png" alt="Cultural icon">
                 <h2>Cultural and Etiquette Guides</h2>
                 <div class="guide-content">
                     <h3>Understanding Malaysian Culture</h3>
@@ -82,7 +91,7 @@
             </section>
 
             <section id="safety-health" class="grid-item">
-                <img src="/api/placeholder/64/64" alt="Safety icon">
+                <img src="Images/safety icon.png" alt="Safety icon">
                 <h2>Safety and Health Resources</h2>
                 <div class="guide-content">
                     <h3>Emergency Contacts</h3>
@@ -106,7 +115,7 @@
             </section>
 
             <section id="adventure-eco" class="grid-item">
-                <img src="/api/placeholder/64/64" alt="Adventure icon">
+                <img src="Images/adventure icon.jpg" alt="Adventure icon">
                 <h2>Adventure and Eco-Tourism</h2>
                 <div class="guide-content">
                     <h3>Popular Outdoor Activities</h3>
@@ -157,7 +166,23 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Explore Malaysia. All rights reserved.</p>
+        <div class="footer-bottom">
+            <span> Looking to travel to Malaysia? Here are some <br>
+                helpful tips to get you started on your trip.
+            </span>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/facebook-icon.png" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/instagram-icon.jpg" alt="instagram">
+                </a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/x-icon.png" alt="twitter">
+                </a>
+            </div>                
+        </div>
+        <p>&copy; 2024 Ruilong Huang. All rights reserved</p>
     </footer>
 
     <script src="js/index.js"></script>

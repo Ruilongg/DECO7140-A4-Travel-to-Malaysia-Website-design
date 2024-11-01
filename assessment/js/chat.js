@@ -63,7 +63,7 @@ function handleGetError(error) {
     console.error("Failed to load chat messages:", error);
 }
 
-//// 为聊天表单添加提交事件监听器
+//为聊天表单添加提交事件监听器
 // Event listener for submitting chat message
 document.getElementById('chatPostForm').addEventListener('submit', function(event) {
     event.preventDefault();
