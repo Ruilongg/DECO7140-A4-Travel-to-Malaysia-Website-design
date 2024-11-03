@@ -130,3 +130,245 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* 搜索框响应式 */
+@media (max-width: 768px) {
+    .search-box {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .search-fields {
+        flex-direction: column;
+    }
+
+    .search-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-submit {
+        grid-column: 1;
+    }
+}
+
+/* Home页面响应式 */
+@media (max-width: 768px) {
+    .home-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .home-text {
+        padding-right: 0;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-description {
+        font-size: 1rem;
+    }
+
+    .home-search {
+        padding: 15px;
+    }
+
+    .search-tabs {
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+}
+
+/* Contact部分响应式 */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Feature Cards响应式 */
+@media (max-width: 1024px) {
+    .features-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        grid-template-columns: 1fr;
+        padding: 30px 0;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .feature-card i {
+        font-size: 28px;
+    }
+}
+
+/* Grid Container响应式 */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+/* Template Grid响应式 */
+@media (max-width: 1024px) {
+    .template-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .template-image {
+        height: 180px;
+    }
+}
+
+/* Planner Container响应式 */
+@media (max-width: 1024px) {
+    .planner-container {
+        grid-template-columns: 300px 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .planner-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 小屏幕通用样式 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    
+    .btn, 
+    .search-btn,
+    .send-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    input, 
+    select, 
+    textarea {
+        font-size: 14px;
+    }
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    #flexnavbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-green);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #flexnavbar.show {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    #flexnavbar ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #flexnavbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #flexnavbar a {
+        padding: 12px 0;
+        display: block;
+        color: var(--accent-white);
+    }
+
+    /* 语言选择器在移动端的位置调整 */
+    .header-right {
+        margin-right: 60px; /* 为菜单按钮留出空间 */
+    }
+}
+
+/* 下拉动画 */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 添加打印样式 */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* 优化移动端性能 */
+@media (max-width: 768px) {
+    * {
+        will-change: auto;
+    }
+}

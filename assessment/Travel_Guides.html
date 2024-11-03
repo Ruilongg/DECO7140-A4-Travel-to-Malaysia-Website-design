@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Destinations.html">Destinations</a></li>
@@ -31,7 +32,6 @@
                 <a href="#" class="language" data-lang="es">Español</a>
               </div>
             </div>
-            <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
           </div>
     </header>
     <section class="breadcrumb">
@@ -44,10 +44,10 @@
     </div>
 
     <main>
-        <section id="search">
-            <form action="/search" method="get">
-                <input type="text" name="query" placeholder="Search travel guides...">
-                <button type="submit">Search</button>
+        <section id="search" role="search">
+            <form action="/search" method="get" aria-label="Search travel guides">
+                <input type="text" id="search-input" name="query" aria-required="true" placeholder="Search travel guides...">
+                <button type="submit" aria-label="Search">Search</button>
             </form>
         </section>
 
@@ -56,9 +56,9 @@
         </section>
 
         <div class="grid-container">
-            <section id="cultural-guides" class="grid-item">
-                <img src="Images/Malaysian cultural icon.png" alt="Cultural icon">
-                <h2>Cultural and Etiquette Guides</h2>
+            <section id="cultural-guides" class="grid-item" role="region" aria-labelledby="cultural-title">
+                <img src="Images/Malaysian cultural icon.png" alt="Icon representing Malaysian cultural diversity with traditional symbols"">
+                <h2 id="cultural-title">Cultural and Etiquette Guides</h2>
                 <div class="guide-content">
                     <h3>Understanding Malaysian Culture</h3>
                 <p>Malaysia is a melting pot of cultures, primarily consisting of Malay, Chinese, and Indian influences. Here are some key points to remember:</p>
@@ -69,23 +69,26 @@
                 </ul>
 
                 <h3>Basic Language Phrases</h3>
-                <table>
-                    <tr>
-                        <th>English</th>
-                        <th>Malay</th>
-                    </tr>
-                    <tr>
-                        <td>Hello</td>
-                        <td>Selamat</td>
-                    </tr>
-                    <tr>
-                        <td>Thank you</td>
-                        <td>Terima kasih</td>
-                    </tr>
-                    <tr>
-                        <td>Please</td>
-                        <td>Sila</td>
-                    </tr>
+                <table aria-label="Basic Malaysian phrases">
+                    <caption>Common Malaysian Phrases for Travelers</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">English</th>
+                            <th scope="col">Malay</th>
+                        </tr>
+                        <tr>
+                            <td>Hello</td>
+                            <td>Selamat</td>
+                        </tr>
+                        <tr>
+                            <td>Thank you</td>
+                            <td>Terima kasih</td>
+                        </tr>
+                        <tr>
+                            <td>Please</td>
+                            <td>Sila</td>
+                        </tr>
+                    </thead>
                 </table>
             </div>
             </section>
@@ -146,19 +149,25 @@
             </section>
         </div>
 
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
+        <section id="faq" role="region" aria-labelledby="faq-title">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
             <div class="faq-content">
                 <details>
-                    <summary>What's the best time to visit Malaysia?</summary>
+                    <summary role="button" aria-expanded="false">
+                        What's the best time to visit Malaysia?
+                    </summary>
                     <p>The best time to visit Malaysia is generally between March to early October. However, the country's weather patterns vary by region, so it's worth checking specific destinations.</p>
                 </details>
                 <details>
-                    <summary>Do I need a visa to enter Malaysia?</summary>
+                    <summary role="button" aria-expanded="false">
+                        Do I need a visa to enter Malaysia?
+                    </summary>
                     <p>Many nationalities can enter Malaysia visa-free for stays up to 90 days. However, visa requirements can change, so always check with the Malaysian embassy or consulate in your country before traveling.</p>
                 </details>
                 <details>
-                    <summary>Is Malaysia safe for solo travelers?</summary>
+                    <summary role="button" aria-expanded="false">
+                        Is Malaysia safe for solo travelers?
+                    </summary>
                     <p>Malaysia is generally safe for solo travelers, including women. However, as with any travel, it's important to stay aware of your surroundings and take normal precautions.</p>
                 </details>
             </div>
@@ -167,9 +176,14 @@
 
     <footer>
         <div class="footer-bottom">
-            <span> Looking to travel to Malaysia? Here are some <br>
-                helpful tips to get you started on your trip.
-            </span>
+            <div class="footer-logo">
+                <img src="Images/Explore_Malaysia.png" alt="Explore Malaysia">
+                <div class="footer-text">
+                    <h3>Explore Malaysia</h3>
+                    <span>Looking to travel to Malaysia? Here are some <br>
+                        helpful tips to get you started on your trip.</span>
+                </div>
+            </div>
             <div class="social-media">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <img src="Images/facebook-icon.png" alt="facebook">

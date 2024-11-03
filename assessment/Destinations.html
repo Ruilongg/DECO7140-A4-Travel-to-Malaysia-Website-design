@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Destinations.html">Destinations</a></li>
@@ -31,7 +32,6 @@
                 <a href="#" class="language" data-lang="es">Español</a>
               </div>
             </div>
-            <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
           </div>
     </header>
 
@@ -48,9 +48,9 @@
             </div>
         </section>
 
-        <div class="filter-section">
-            <div class="filter-categories">
-                <button class="active">Popular</button>
+        <div class="filter-section" role="search" aria-label="Destination filters">
+            <div class="filter-categories" role="tablist">
+                <button role="tab" aria-selected="true" class="active">Popular</button>
                 <button>Nature Parks</button>
                 <button>Cultural Sites</button>
                 <button>Adventure Spots</button>
@@ -63,7 +63,7 @@
             </button>
         </div>
 
-        <section class="destination-grid">
+        <section class="destination-grid" role="region" aria-label="Destination listings">
             <div class="destination-item">
                 <img src="Images/langkawi.png" alt="Langkawi">
                 <p>Langkawi</p>
@@ -100,9 +100,14 @@
     </main>
     <footer>
         <div class="footer-bottom">
-            <span> Looking to travel to Malaysia? Here are some <br>
-                helpful tips to get you started on your trip.
-            </span>
+            <div class="footer-logo">
+                <img src="Images/Explore_Malaysia.png" alt="Explore Malaysia">
+                <div class="footer-text">
+                    <h3>Explore Malaysia</h3>
+                    <span>Looking to travel to Malaysia? Here are some <br>
+                        helpful tips to get you started on your trip.</span>
+                </div>
+            </div>
             <div class="social-media">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <img src="Images/facebook-icon.png" alt="facebook">

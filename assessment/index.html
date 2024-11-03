@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore Malaysia - Your complete guide to discovering Malaysia's destinations, travel guides and trip planning">
         <title>Explore Malaysia - Home</title>
         <link rel="stylesheet" href="css/css_reset.css">
         <link rel="stylesheet" href="css/base.css">
@@ -13,101 +14,150 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <nav id = "flexnavbar" >
-                <ul>
-                    <li class="nav-active"><a href="index.html">Home</a></li>
-                    <li><a href="Destinations.html">Destinations</a></li>
-                    <li><a href="Travel_Guides.html">Travel Guides</a></li>
-                    <li><a href="Itinerary_Planner.html">Itinerary Planner</a></li>
-                    <li><a href="Contact_Us.html">Contact Us</a></li>
+        <!-- 跳过导航链接 -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <header role="banner">
+            <nav role="navigation" aria-label="Main navigation">
+                <ul role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="Destinations.html" role="menuitem">Destinations</a></li>
+                    <li role="none"><a href="Travel_Guides.html" role="menuitem">Travel Guides</a></li>
+                    <li role="none"><a href="Itinerary_Planner.html" role="menuitem">Itinerary Planner</a></li>
+                    <li role="none"><a href="Contact_Us.html" role="menuitem">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="header-right">
                 <div class="language-dropdown">
-                  <button class="language-btn">English</button>
-                  <div class="language-options">
-                    <a href="#" class="language" data-lang="zh">中文</a>
-                    <a href="#" class="language" data-lang="es">Español</a>
-                  </div>
+                    <button class="language-btn" aria-expanded="false" aria-haspopup="true" aria-label="Select language">
+                        English
+                    </button>
+                    <div class="language-options" role="menu" aria-label="Language options">
+                        <a href="#" class="language" role="menuitem" data-lang="zh" lang="zh">中文</a>
+                        <a href="#" class="language" role="menuitem" data-lang="es" lang="es">Español</a>
+                    </div>
                 </div>
-                <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
-              </div>
+            </div>
         </header>
 
-        <main class="home-main">
-            <section class="home-hero">
+        <main class="home-main" id="main-content" role="main">
+            <section class="home-hero" aria-labelledby="hero-title">
                 <div class="home-content">
                     <!-- 左侧文本内容 -->
                     <div class="home-text">
-                        <span class="home-tag">It's time to go ✈️</span>
-                        <h1 class="home-title">Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
+                        <span class="home-tag" aria-label="Travel suggestion">It's time to go ✈️</span>
+                        <h1 id="hero-title" class="home-title">Discover the Wonders of Malaysia – Your Journey Begins Here.</h1>
                         <p class="home-description">Find your next destination, plan your itinerary, and immerse yourself in Malaysia's diverse culture.</p>
                     
                         <!-- 搜索部分 -->
-                        <div class="home-search">
-                            <nav class="search-tabs">
-                                <button class="search-tab active">Stays</button>
-                                <button class="search-tab">Activities</button>
-                                <button class="search-tab">Culture</button>
+                        <div class="home-search" role="search">
+                            <nav class="search-tabs" role="tablist" aria-label="Search options">
+                                <button class="search-tab active" role="tab" 
+                                        aria-selected="true" 
+                                        aria-controls="stays-panel"
+                                        id="stays-tab">Stays</button>
+                                <button class="search-tab" role="tab" 
+                                        aria-selected="false" 
+                                        aria-controls="activities-panel"
+                                        id="activities-tab">Activities</button>
+                                <button class="search-tab" role="tab" 
+                                        aria-selected="false" 
+                                        aria-controls="culture-panel"
+                                        id="culture-tab">Culture</button>
                             </nav>
                             
                             <div class="search-container">
                                 <div class="search-field">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <input type="text" placeholder="Search destinations">
+                                    <label for="destination">Destination</label>
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <input type="text" 
+                                           id="destination" 
+                                           placeholder="Search destinations" 
+                                           aria-label="Search destinations">
                                 </div>
                                 
                                 <div class="search-field">
-                                    <i class="fas fa-calendar"></i>
-                                    <input type="date" placeholder="Check in">
+                                    <label for="check-in">Check in date</label>
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <input type="date" 
+                                           id="check-in" 
+                                           aria-label="Select check in date">
                                 </div>
                                 
                                 <div class="search-field">
-                                    <i class="fas fa-calendar"></i>
-                                    <input type="date" placeholder="Check out">
+                                    <label for="check-out">Check out date</label>
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <input type="date" 
+                                           id="check-out" 
+                                           aria-label="Select check out date">
                                 </div>
                                 
                                 <div class="search-field">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" placeholder="Add guests">
+                                    <label for="guests">Number of guests</label>
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <input type="text" 
+                                           id="guests" 
+                                           placeholder="Add guests" 
+                                           aria-label="Enter number of guests">
                                 </div>
                                 
-                                <button class="search-submit">Search</button>
+                                <button class="search-submit" 
+                                        aria-label="Search for accommodations">Search</button>
                             </div>
                         </div>
                     </div>
     
                     <!-- 右侧图片 -->
                     <div class="home-image">
-                        <img src="Images/Kuala _Lumpur.png" alt="Malaysia Skyline">
+                        <img src="Images/Kuala _Lumpur.png" 
+                             alt="Kuala Lumpur skyline featuring iconic landmarks and modern architecture including the Petronas Towers" 
+                             role="img">
                     </div>
                 </div>
             </section>
         </main>
         
-        <footer>
+        <footer role="contentinfo">
             <div class="footer-bottom">
-                <span> Looking to travel to Malaysia? Here are some <br>
-                    helpful tips to get you started on your trip.
-                </span>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="Images/facebook-icon.png" alt="facebook">
+                <div class="footer-logo">
+                    <img src="Images/Explore_Malaysia.png" 
+                         alt="Explore Malaysia logo" 
+                         role="img">
+                    <div class="footer-text">
+                        <h3 id="footer-heading">Explore Malaysia</h3>
+                        <p aria-labelledby="footer-heading">Looking to travel to Malaysia? Here are some <br>helpful tips to get you started on your trip.</p>
+                    </div>
+                </div>
+                <div class="social-media" role="navigation" aria-label="Social media links">
+                    <a href="https://www.facebook.com/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Visit our Facebook page">
+                        <img src="Images/facebook-icon.png" 
+                             alt="" 
+                             role="presentation">
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="Images/instagram-icon.jpg" alt="instagram">
+                    <a href="https://www.instagram.com/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Visit our Instagram page">
+                        <img src="Images/instagram-icon.jpg" 
+                             alt="" 
+                             role="presentation">
                     </a>
-                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="Images/x-icon.png" alt="twitter">
+                    <a href="https://x.com/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Visit our X (formerly Twitter) page">
+                        <img src="Images/x-icon.png" 
+                             alt="" 
+                             role="presentation">
                     </a>
                 </div>                
             </div>
-            <p>&copy; 2024 Ruilong Huang. All rights reserved</p>
+            <p role="contentinfo">&copy; 2024 Ruilong Huang. All rights reserved</p>
         </footer>
+        
         <script type="module" src="js/index.js"></script>
     </body>
 </html>
-
-
-

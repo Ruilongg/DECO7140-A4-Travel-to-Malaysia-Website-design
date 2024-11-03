@@ -28,12 +28,6 @@
        display: block; /* Make these HTML5 elements block-level elements */
    }
    
-   /* Set default line height for the body */
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-}
 
 ol, ul {
     list-style: none;
@@ -61,4 +55,57 @@ img {
        border-collapse: collapse; /* Collapse borders so they overlap */
        border-spacing: 0; /* Remove default space between table cells */
    }
-   
+
+/* css_reset.css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 添加无障碍支持 */
+:focus {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* 添加暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+/* 添加减弱动画支持 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

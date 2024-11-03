@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <nav>
             <ul>
@@ -32,7 +33,6 @@
                 <a href="#" class="language" data-lang="es">Español</a>
               </div>
             </div>
-            <a href="#" class="user-icon"><img src="user-icon.png" alt="User"></a>
           </div>
     </header>
     <section class="breadcrumb">
@@ -66,23 +66,23 @@
 
     <main class="container">
         <section class="features-section">
-            <div class="feature-card">
-                <i class="fas fa-map-marked-alt"></i>
+            <div class="feature-card" role="article" aria-labelledby="feature-title-1">
+                <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                 <h3>Custom Itinerary Builder</h3>
                 <p>Design your personalized journey by adding destinations, activities, and accommodations.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-route"></i>
+            <div class="feature-card" role="article" aria-labelledby="feature-title-1">
+                <i class="fas fa-route" aria-hidden="true"></i>
                 <h3>Suggested Itineraries</h3>
                 <p>Explore curated travel plans based on themes like culture, adventure, or relaxation.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-map"></i>
+            <div class="feature-card" role="article" aria-labelledby="feature-title-1">
+                <i class="fas fa-map" aria-hidden="true"></i>
                 <h3>Interactive Map</h3>
                 <p>Visualize and optimize your travel routes with our integrated mapping system.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-tools"></i>
+            <div class="feature-card" role="article" aria-labelledby="feature-title-1">
+                <i class="fas fa-tools" aria-hidden="true"></i>
                 <h3>Smart Planning Tools</h3>
                 <p>Access powerful tools for organizing and personalizing your travel experience.</p>
             </div>
@@ -99,11 +99,14 @@
                 <div class="planner-sidebar">
                     <div class="planning-card">
                         <h3>Travel Dates</h3>
-                        <div class="date-picker-group">
+                        <div class="date-picker-group" role="group" aria-label="Travel date selection">
                             <div class="date-field">
-                                <label>Start Date</label>
+                                <label for="start-date">Start Date</label>
                                 <div class="input-with-icon">
-                                    <input type="date" id="start-date">
+                                    <input type="date" 
+                                            id="start-date" 
+                                            required 
+                                            aria-required="true">
                                     <i class="fas fa-calendar-alt"></i>
                                 </div>
                             </div>
@@ -119,8 +122,8 @@
         
                     <div class="planning-card">
                         <h3>Choose Destinations</h3>
-                        <div class="search-box">
-                            <input type="text" placeholder="Search destinations...">
+                        <div class="search-box" role="search">
+                            <input type="text" aria-label="Search destinations" id="destination-search" placeholder="Search for Destinations">
                             <i class="fas fa-search"></i>
                         </div>
                         
@@ -148,7 +151,7 @@
                             <p>Select destinations to start planning your trip</p>
                         </div>
                     </div>
-                    <div class="map-container" id="map">
+                    <div class="map-container" id="map" role="region" aria-label="Interactive map">
                         <!-- Map will be integrated here -->
                     </div>
                 </div>
@@ -162,13 +165,13 @@
             </div>
             
             <div class="template-grid">
-                <div class="template-card">
+                <div class="template-card" role="article" aria-labelledby="template-title-1">
                     <div class="template-image">
                         <img src="Images/cultural-explorer.jpg" alt="Cultural Experience">
                         <div class="template-badge">Most Popular</div>
                     </div>
                     <div class="template-content">
-                        <h3>Cultural Explorer</h3>
+                        <h3 id="template-title-1">Cultural Explorer</h3>
                         <p class="duration"><i class="fas fa-clock"></i> 7 Days of Heritage and Tradition</p>
                         <ul class="highlights">
                             <li>Historical Malacca Tour</li>
@@ -179,13 +182,13 @@
                     </div>
                 </div>
         
-                <div class="template-card">
+                <div class="template-card" role="article" aria-labelledby="template-title-1">
                     <div class="template-image">
                         <img src="Images/nature-adventure.jpg" alt="Nature Adventure">
                         <div class="template-badge">Eco-Friendly</div>
                     </div>
                     <div class="template-content">
-                        <h3>Nature Adventure</h3>
+                        <h3 id="template-title-2">Nature Adventure</h3>
                         <p class="duration"><i class="fas fa-clock"></i> 5 Days in Malaysia's Wilderness</p>
                         <ul class="highlights">
                             <li>Taman Negara Rainforest Trek</li>
@@ -196,13 +199,13 @@
                     </div>
                 </div>
         
-                <div class="template-card">
+                <div class="template-card" role="article" aria-labelledby="template-title-1">
                     <div class="template-image">
                         <img src="Images/island-paradise.jpg" alt="Beach Holiday">
                         <div class="template-badge">Relaxation</div>
                     </div>
                     <div class="template-content">
-                        <h3>Island Paradise</h3>
+                        <h3 id="template-title-3">Island Paradise</h3>
                         <p class="duration"><i class="fas fa-clock"></i> 6 Days of Tropical Bliss</p>
                         <ul class="highlights">
                             <li>Langkawi Island Hopping</li>
@@ -217,9 +220,14 @@
     </main>
     <footer>
         <div class="footer-bottom">
-            <span> Looking to travel to Malaysia? Here are some <br>
-                helpful tips to get you started on your trip.
-            </span>
+            <div class="footer-logo">
+                <img src="Images/Explore_Malaysia.png" alt="Explore Malaysia">
+                <div class="footer-text">
+                    <h3>Explore Malaysia</h3>
+                    <span>Looking to travel to Malaysia? Here are some <br>
+                        helpful tips to get you started on your trip.</span>
+                </div>
+            </div>
             <div class="social-media">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <img src="Images/facebook-icon.png" alt="facebook">
